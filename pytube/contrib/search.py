@@ -151,6 +151,12 @@ class Search:
                 # Renderer for reels
                 if 'reelShelfRenderer' in video_details:
                     continue
+                ## No idea what these errors are but 
+                if 'showingResultsForRenderer' in video_details:
+                    continue
+                
+                if 'adSlotRenderer' in video_details:
+                    continue
 
                 if 'videoRenderer' not in video_details:
                     logger.warning('Unexpected renderer encountered.')
